@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(175, 255, 253, 0.36) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+#container,
+#instructions {
+  width: 60%;
+}
+
+#guess-form,
+#game-data,
+#instructions,
+#response-msg {
+  font-size: 2em;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+th {
+  font-size: 4em;
+}
+
+td {
+  font-size: 3em;
+  border: 1px solid black;
+}
+
+#game-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#guess-form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  display: flex;
+  width: 40%;
+}
+
+#user-guess,
+#submit-btn,
+#start-btn {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#user-guess {
+  width: 50%;
+}
+
+#response-msg > p {
+  text-align: center;
+  color: rgb(253, 98, 98);
+}
+
+#response-msg {
+  background-color: rgb(253, 235, 235);
+}
+
+button {
+  cursor: pointer;
+  transition-duration: 1s;
+  background-color: rgba(0, 212, 255, 1);
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: rgba(175, 255, 253, 0.36);
+  color: black;
+}
+
+#start-btn {
+  width: 100%;
+  font-size: 3em;
+}
+
+.start {
+  cursor: not-allowed;
+  background-color: rgba(116, 252, 179, 0.36);
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin: 15px;
+}
+
+.green {
+  color: green;
+}
+
+.gold {
+  color: gold;
+}
+
+.red {
+  color: red;
+}
+
+@media screen and (max-width: 1170px) {
+  #guess-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-control {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}

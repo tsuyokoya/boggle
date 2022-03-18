@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/styles.css" />
+    <title>Boggle Game</title>
+  </head>
+  <body>
+    <div id="container">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="5">BOGGLE!</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in boggle_board %}
+          <tr>
+            {% for letter in row %}
+            <td>{{letter}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div>
+        <button id="start-btn">START GAME</button>
+      </div>
+      <div id="response-msg"></div>
+      <div id="game-data">
+        <p class="green" id="timer">Time Left: 60 seconds</p>
+        <p id="score-count">Current Score: 0</p>
+        <p>High Score: {{session['score']}}</p>
+      </div>
+      <form id="guess-form">
+        <div class="form-control">
+          <label for="user-guess">Your Guess:</label>
+          <input type="text" name="user-guess" id="user-guess" />
+        </div>
+        <div>
+          <button id="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div id="instructions">
+      <h2>&#8595; Instructions &#8595;</h2>
+      <ul>
+        <li>The board will generate a random assortment of letters.</li>
+        <li>
+          Create words from adjacent letters - letters must connect to each
+          other to spell the word.
+        </li>
+        <li>
+          You only have 60 seconds! The timer will start counting down as soon
+          as you press "Start Game".
+        </li>
+        <li>The goal of the game is to get the highest point total.</li>
+        <li>Click on the "Reset" button to start a new game.</li>
+      </ul>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./static/index.js"></script>
+  </body>
+</html>
