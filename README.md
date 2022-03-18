@@ -1,4 +1,4 @@
-# Connect Four Game
+# Boggle!
 
 <img src='./boggle.png' alt='boggle screenshot' height='350' width='500'>
 
